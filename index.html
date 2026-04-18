@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Excekiel Dote | Portfolio</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+</head>
+<body>
+
+  <nav>
+    <div class="logo">Portfolio</div>
+    <ul id="nav-links">
+      <li><a href="#home">Home</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#resume">Resume</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+    <button id="hamburger"><i class="fas fa-bars"></i></button>
+  </nav>
+
+  <section id="home">
+    <div class="home-content">
+      <p class="greeting">Hello, I'm</p>
+      <h1 id="typed-name"></h1>
+      <p class="tagline">Social Media Manager & IT Student</p>
+      <div class="home-btns">
+        <a href="#projects" class="btn">View Projects</a>
+        <a href="#" class="btn outline" id="dl-cv">Download CV</a>
+      </div>
+    </div>
+  </section>
+
+  <section id="about">
+    <h2 class="section-title">About Me</h2>
+    <div class="about-grid">
+      <div class="about-img">
+        <div class="avatar">
+          <img src="594076622_735003142953643_1820339700110509215_n.jpg" alt="Excekiel Dote" />
+        </div>
+      </div>
+      <div class="about-text">
+        <p>I'm <strong>Excekiel Dote</strong>, an IT student at Cavite State University with a passion for digital marketing and web development. With hands-on experience as a Social Media Manager, I bridge the gap between technology and creative content strategy.</p>
+        <div class="skills">
+          <h3>Skills & Interests</h3>
+          <div class="skill-tags">
+            <span>Social Media Marketing</span><span>Content Creation</span>
+            <span>HTML</span><span>CSS</span><span>JavaScript</span><span>Analytics</span>
+          </div>
+        </div>
+        <button class="btn" id="more-about">Read More</button>
+        <p id="extra-about" class="hidden">I love creating mini-projects like games and tools that challenge my logic and creativity. Outside of coding, I enjoy managing social media accounts and exploring digital trends.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="projects">
+    <h2 class="section-title">Projects</h2>
+    <div class="projects-grid">
+
+      <div class="card">
+        <div class="card-icon"><i class="fas fa-thermometer-half"></i></div>
+        <h3>Thermometer App</h3>
+        <p>A temperature converter that switches between Celsius, Fahrenheit, and Kelvin in real time.</p>
+        <button class="btn small" onclick="openModal('thermo')">View Project</button>
+      </div>
+
+      <div class="card">
+        <div class="card-icon"><i class="fas fa-sticky-note"></i></div>
+        <h3>Notepad</h3>
+        <p>A browser-based notepad with save, clear, and character count features using localStorage.</p>
+        <button class="btn small" onclick="openModal('notepad')">View Project</button>
+      </div>
+
+      <div class="card">
+        <div class="card-icon"><i class="fas fa-calculator"></i></div>
+        <h3>Calculator</h3>
+        <p>A fully functional calculator supporting basic arithmetic operations with a clean UI.</p>
+        <button class="btn small" onclick="openModal('calc')">View Project</button>
+      </div>
+
+      <div class="card">
+        <div class="card-icon"><i class="fas fa-hand-rock"></i></div>
+        <h3>Rock Paper Scissors</h3>
+        <p>Classic RPS game against the computer with score tracking and round results.</p>
+        <button class="btn small" onclick="openModal('rps')">View Project</button>
+      </div>
+
+    </div>
+  </section>
+
+  <div id="modal-overlay" class="hidden">
+    <div id="modal-box">
+      <button id="close-modal"><i class="fas fa-times"></i></button>
+      <div id="modal-content"></div>
+    </div>
+  </div>
+
+  <section id="resume">
+    <h2 class="section-title">Resume</h2>
+    <div class="resume-grid">
+
+      <div class="resume-col">
+        <h3><i class="fas fa-graduation-cap"></i> Education</h3>
+        <div class="timeline-item">
+          <span class="year">2023 – Present</span>
+          <h4>BS Information Technology</h4>
+          <p>Cavite State University</p>
+        </div>
+        <div class="timeline-item">
+          <span class="year">2019 – 2023</span>
+          <h4>Senior High School – ICT Strand</h4>
+          <p>Cavite National High School</p>
+        </div>
+      </div>
+
+      <div class="resume-col">
+        <h3><i class="fas fa-briefcase"></i> Experience</h3>
+        <div class="timeline-item">
+          <span class="year">2024</span>
+          <h4>Social Media Manager</h4>
+          <p>Body Reset · 1 Year</p>
+        </div>
+        <div class="timeline-item">
+          <span class="year">2023</span>
+          <h4>Social Media Manager</h4>
+          <p>Gearsthetic Apparel · 1 Year</p>
+        </div>
+      </div>
+
+      <div class="resume-col">
+        <h3><i class="fas fa-tools"></i> Skills</h3>
+        <div class="skill-bar-wrap">
+          <div class="skill-bar-label"><span>Social Media Marketing</span><span>90%</span></div>
+          <div class="bar"><div class="fill" data-w="90"></div></div>
+        </div>
+        <div class="skill-bar-wrap">
+          <div class="skill-bar-label"><span>Content Creation</span><span>85%</span></div>
+          <div class="bar"><div class="fill" data-w="85"></div></div>
+        </div>
+        <div class="skill-bar-wrap">
+          <div class="skill-bar-label"><span>HTML / CSS</span><span>80%</span></div>
+          <div class="bar"><div class="fill" data-w="80"></div></div>
+        </div>
+        <div class="skill-bar-wrap">
+          <div class="skill-bar-label"><span>JavaScript</span><span>70%</span></div>
+          <div class="bar"><div class="fill" data-w="70"></div></div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <section id="contact">
+    <h2 class="section-title">Contact</h2>
+    <div class="contact-wrap">
+      <div class="contact-info">
+        <p>
+          <i class="fas fa-envelope"></i>
+          <a href="mailto:ezekiel.dote@cvsu.edu.ph">ezekiel.dote@cvsu.edu.ph</a>
+        </p>
+        <p>
+          <i class="fab fa-github"></i>
+          <a href="https://github.com/excekiel" target="_blank">github.com/excekiel</a>
+        </p>
+        <p>
+          <i class="fab fa-linkedin"></i>
+          <a href="https://www.linkedin.com/in/excekiel-dote" target="_blank">linkedin.com/in/YOURLINKEDIN</a>
+        </p>
+        <p>
+          <i class="fab fa-facebook"></i>
+          <a href="https://www.facebook.com/excekiel.dote" target="_blank">facebook.com/YOURFACEBOOK</a>
+        </p>
+      </div>
+      <form id="contact-form">
+        <input type="text" id="fname" placeholder="Your Name" />
+        <span class="err" id="err-name"></span>
+        <input type="email" id="femail" placeholder="Your Email" />
+        <span class="err" id="err-email"></span>
+        <textarea id="fmsg" rows="5" placeholder="Your Message"></textarea>
+        <span class="err" id="err-msg"></span>
+        <button type="submit" class="btn">Send Message</button>
+        <p id="form-success" class="hidden success">Message sent successfully!</p>
+      </form>
+    </div>
+  </section>
+
+
+  <script src="script.js"></script>
+</body>
+</html>
